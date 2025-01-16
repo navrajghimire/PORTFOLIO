@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Darker+Grotesque:wght@300..900&family=Domine:wght@400..700&family=Frijole&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/final_project.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <ul class="nav-links">
+                    <img src="assets/navraj_logo_1.png" alt="Navraj Logo with word mark and text below it">
+                </ul>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+                    <a href="about.html"><i class="fa fa-fw fa-user"></i> About</a> 
+                    <a href="portfolio.html"><i class="fa fa-fw fa-envelope"></i> Portfolio</a>
+                    <a href="portfolio.html#footer"><i class="fa fa-fw fa-phone"></i> Contact</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <br>
+            <br>
+            <br>
+            <h1 class="content-heading">My Portfolio</h1>
+        </div>
+
+        <section class="portfolio-section">
+            <div class="section-heading">
+                <h2 class="section-heading">Here are some of my works as a first-year student (both as individual and as a part of a team) from the Interactive Design - Graphic Design program at the Southern Alberta Institute of Technology.</h2>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <a href="assets/Assignment_Report_Applying the Agile Framework.pdf" target="_blank">
+                        <img class="portfolio-image" src="assets/Agile framework.png" alt="A Report on applying the Agile Framework">
+                    </a>
+                    <p>Ux-Applying Agile Framework <span>(PDF)</span></p> 
+                </div>
+
+                <div class="portfolio-item">
+                    <a href="assets/MMDA203_C Group 11_Video_1920x1080.mp4" target="_blank">
+                        <img class="portfolio-image" src="assets/Hell energy drink.png" alt="A video for a health drink called Hell">
+                    </a>
+                    <p>Digital Media-Creation of a Commercial video <span>(Video)</span></p> 
+                </div>
+
+                <div class="portfolio-item">
+                    <a href="assets/The Product Managers Role in the Product Life Cycle_Analysis and Presentation.mp4" target="_blank">
+                        <img class="portfolio-image" src="assets/productmanagers _role.png" alt="A Report on product managers role">
+                    </a>
+                    <p>Ux-The Product Managers Role <span>(Video)</span></p> 
+                </div>
+
+                <div class="portfolio-item">
+                    <a href="assets/Funnel Analysis Report.pdf" target="_blank">
+                        <img class="portfolio-image" src="assets/funnel_analysis_report.png" alt="A report on funnel analysis">
+                    </a>
+                    <p>Product Management- Funnel Analysis Report <span>(PDF)</span></p>
+                </div>
+
+                <div class="portfolio-item">
+                    <a href="assets/INDD BRAND IDENTITY GUIDELINES.pdf" target="_blank">
+                        <img class="portfolio-image" src="assets/inquisitive_india.png" alt="A brand guideline document">
+                    </a>
+                    <p>Visual Communication- Brand Identity Guidelines <span>(PDF)</span></p>                     
+                </div>
+
+                <div class="portfolio-item">
+                    <a href="assets/Portfolio Collection Part A_OL.pdf" target="_blank">
+                        <img class="portfolio-image" src="assets/portfolio_design.png" alt="A portfolio collection document">
+                    </a>
+                    <p>Visual Communication- Portfolio Collections <span>(PDF)</span></p> 
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="dynamic-content">
+        <h2>Just for Fun - Dynamic Portfolio Item</h2>
+        <p>Click the button below to load a random portfolio item.</p>
+        <button id="load-item" class="button">Load Portfolio Item</button>
+        <div id="portfolio-item"></div>
+    </section>
+
+    <section class="content-section">
+        <div class="section-heading">
+            <h2 class="section-heading"><br>Before you go............!!!</h2>
+        </div>
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <p>If you liked my project, you can go to my Facebook, LinkedIn, and Twitter pages for more information. Thank you for your valuable time to go through my creation and understanding my experiences. I hope you will give me an opportunity to serve you once. Assuring you of a fruitful collaboration.</p>
+                    <p><strong>You can connect with me at connect@navrajghimire.com or call at +1 234 456 7890</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <footer id="footer">
+            <div class="footer-container">
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +1 234 567 8900</p>
+                <p><strong>Email:</strong> connect@navrajghimire.com</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html" aria-label="Home"><i class="fa fa-fw fa-home"></i></a>
+                <a href="about.html" aria-label="About"><i class="fa fa-fw fa-user"></i></a>
+                <a href="portfolio.html" aria-label="Portfolio"><i class="fa fa-fw fa-envelope"></i></a>
+                <a href="portfolio.html#footer" aria-label="Contact"><i class="fa fa-fw fa-phone"></i></a>
+            </div>
+
+            <div class="footer-copyright-container">
+                <p>© Navraj Ghimire <span id="current-year"></span> | All Rights Reserved</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/navraj-ghimire-12b28059/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.google.com/maps/place/Southern+Alberta+Institute+of+Technology/@51.0640894,-114.0885397,17z/data=!3m1!4b1!4m6!3m5!1s0x53716f9268a69e81:0xb1db5e68bd61e28!8m2!3d51.0640894!4d-114.0885397!16zL20vMDMyYnds?entry=ttu" target="_blank" aria-label="Google Maps"><i class="fa fa-map-marker"></i></a>
+            </div>
+
+            <div class="contact-details">
+                <p><strong>Hours:</strong> Mon-Fri 9am-5pm</p>
+                <p><strong>Address:</strong> 9999 Street, #22 Whitehorn Court, North East. Calgary, AB. Canada.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,209 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="styles/Asg_two.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anta&family=Darker+Grotesque:wght@300..900&family=Domine:wght@400..700&family=Frijole&family=Pacifico&family=Quicksand:wght@300..700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <title>Common Website Features</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navraj Ghimire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Darker+Grotesque:wght@300..900&family=Domine:wght@400..700&family=Frijole&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Pacifico&family=Quicksand:wght@300..700&family=Rubik+Doodle+Shadow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="styles/final_project.css">
 </head>
-
 <body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <ul class="nav-links">
+                    <img src="assets/navraj_logo_1.png" alt="Navraj Logo with word mark and text below it">
+                </ul>
+            </div>
 
-  <div class="topnav" id="navbar">
-    <a href="#home" class="active">PRINT COLOUR</a>
-    <a href="#news">About</a>
-    <a href="#contact">Services</a>
-    <a href="#about">Contact</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
+            <nav>
+                <ul class="nav-links">
+                    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
+                    <a href="about.html"><i class="fa fa-fw fa-user"></i> About</a> 
+                    <a href="portfolio.html"><i class="fa fa-fw fa-envelope"></i> Portfolio</a>
+                    <a href="portfolio.html#footer"><i class="fa fa-fw fa-phone"></i> Contact</a>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <div class="hero-image">
-    <div class="hero-text">
-      <h1 class="title">I am <br> Navraj Ghimire</h1>
-      <p class="subtitle">a <strong>Colour Management</strong> professional</p>
-      <button>Let's Connect</button>
-    </div>
-  </div>
+    <section class="hero-section">
+        <div class="hero-image">
+            <img src="assets/Color-Chart1.png" alt="Color Chart">
+            <div class="hero-text">
+                <h1>Is Colour Consistency a Headache?</h1>
+                <a href="portfolio.html#footer" class="button">Let's tackle it</a>
+            </div>
+        </div>
+    </section>
 
-  <div class="content-card">
-    <div class="content-section">
-      <h2 class="section-heading">What is Colour Management.........?</h2>
-      <div class="section-text">
-        <p>Colour management in simple terms is controlled conversion of colours across all colour producing devices.</p>
-        <br>
-        <p>Colour management in the printing industry involves a systematic approach to ensuring consistency and accuracy in colour reproduction across various printing devices and substrates. This process encompasses several key elements, including:</p>
-        <ul>
-          <li><strong>Calibration:</strong> Fine-tuning printing equipment to maintain consistent performance and output quality.</li>
-          <br>
-          <li><strong>Linearization:</strong> Ensuring the relationship between input values and output values remains linear across the entire colour gamut to prevent colour shifts.</li>
-          <br>
-          <li><strong>Characterization:</strong> Creating precise colour profiles for each printing device to map input colours to their corresponding output colours accurately.</li>
-          <br>
-          <li><strong>Optimization:</strong> Fine-tuning printing processes and workflows to maximise efficiency and quality while minimising waste and production costs.</li>
-          <br>
-          <li><strong>Standardization:</strong> Adhering to established industry standards and specifications for colour reproduction to ensure consistency and interoperability.</li>
-          <br>
-        </ul>
-        <p>By implementing comprehensive colour management practices that encompass calibration, linearization, characterization, standardization, and optimization, printing businesses can achieve consistent, accurate, and high-quality colour reproduction across their entire workflow, from design to final output.</p>
-      </div>
-    </div>
-  </div>
+    <section class="content-section">
+        <div class="section-heading">
+            <h2 class="content-heading">Colour Management</h2>
+        </div>
 
-  <section class="cards">
-    <div class="card">
-      <img src="assets/img1.jpg" alt="Color Models" style="width:100%">
-      <div class="container">
-        <h4><b>ICC Profile Creation</b></h4>
-        <p class="sub-content">Printer / Scanner / Monitor</p>
-      </div>
-    </div>
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-image">
+                    <img src="assets/img2.png" alt="A person calibrating a Macintosh display">
+                </div>
 
-    <div class="card">
-      <img src="assets/img3.jpg" alt="A person calibrating Monitor" style="width:100%">
-      <div class="container">
-        <h4><b>Display Calibration</b></h4>
-        <p class="sub-content">Apple / Windows OS</p>
-      </div>
-    </div>
+                <div class="content-text">
+                    <p>In the print design and packaging industry, colour management plays a pivotal role in ensuring consistency and accuracy across various printing processes and materials. It involves the precise calibration and control of colour reproduction devices to maintain fidelity and integrity in the final output. From selecting the right colour profiles to implementing calibration techniques, every step is aimed at achieving uniformity in colour representation.</p>
+                    <p>Effective colour management minimises variations in hues, saturation, and brightness, enhancing brand identity and customer perception. Through meticulous monitoring and adjustment, colour management optimises print quality, reduces waste, and fosters efficient production workflows. It encompasses standards adherence, such as CMYK and Pantone, to maintain colour consistency across different substrates and printing technologies. Skilled colour management professionals employ advanced software tools and spectrophotometers to ensure accurate colour reproduction from concept to finished product. Ultimately, in the competitive landscape of print and packaging, adept colour management practices are indispensable for achieving visually striking and brand-compliant results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="card">
-      <img src="assets/Color-Chart.png" alt="An eye glass on a profile chart" style="width:100%">
-      <div class="container">
-        <h4><b>Print Management</b></h4>
-        <p class="sub-content">Client Servicing / Proof Generation</p>
-      </div>
-    </div>
-  </section>
+    <section class="content-section">
+        <div class="section-heading">
+            <h2 class="content-heading">What is an ICC Profile?</h2>
+        </div>
 
-  <section class="accordion-section">
-    <h2 class="section-heading">My Background</h2>
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <p>According to the International Color Consortium (ICC), an ICC profile is a set of data that characterizes a colour input or output device. The profiles describe the colour attributes of a particular device by defining the mapping between the device source and a profile connection space. Simply put, every device that displays colour can be assigned a set of profiles, and these profiles define the colour gamut that will be displayed by these devices.</p>
+                    <p>So how do designers make sure their monitors display the most accurate colour? There are a few steps that they can take to smooth the process. First and foremost, designers need to know the colour gamut of their devices’ operating systems. If the colour gamut of a laptop and monitor are both sRGB, then it means the monitor will display the accurate colour. On the other hand, if a laptop’s colour gamut is sRGB and the monitor’s colour gamut is DCI-P3, then the designer will have to implant the ICC profile of DCI-P3 into the operating system of that computer and set it up to guarantee accurate colour display!</p>
+                    <p>Digital images and graphics all have their own ICC profiles. To ensure the image that you are about to work on is displayed accurately, designers have to match the ICC profile of the image with the monitor and implement the corresponding ICC profile into the computer’s operating system. Once these steps are completed, you can then rest assured that the colour of the image will be properly displayed.</p>
+                    <p>If doing direct printing, then do an ICC on the finished prints (directly print on vinyl, and then do the ICC on the vinyl). For transfer printing, do the ICC on the final product as well.</p>
+                </div>
+    
+                <div class="content-video">
+                    <iframe width="800" height="315" src="https://www.youtube.com/embed/YezMnYNyS6c" title="How to Make ICC Profile for Large Format Printer by FlexiPRINT Software with Spectrophotometer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="accordion">
-      <input type="checkbox" id="accordion-item-1" class="accordion-checkbox" hidden />
-      <label for="accordion-item-1" class="accordion-toggle">Senior Team Lead-Print Production Management</label>
-      <div class="accordion-content">
-        <p class="designation">Encept Premedia Private Limited    •    March 2017 - August 2023</p>
-        <p>Roles:</p>
-        <ul>
-          <li>Ensured a Colour-managed prepress and print workflow within the organization.</li><br>
-          <li>Created ICC profile and calibrated Epson proofers and commercial printers.</li><br>
-          <li>Managed Gmg rip, shade matching, monitor calibration and daily proofer validation.</li><br>
-          <li>Attended online to help brands with shade approvals and best matching print / Cylinder proof.</li><br>
-          <li>Managed a team of 16, ensuring artworks were released as per the supplied specifications.</li><br>
-          <li>Executed production tasks like Preflight, minor amends, QC & Release of Artworks.</li>
-        </ul>
-      </div>
+    <section class="content-section">
+        <div class="section-heading">
+            <h2 class="content-heading">May I help you?</h2>
+        </div>
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <p>Facing issues managing colours? Want to reduce wastage and enhance your productivity? Stringent customer expectations driving you crazy? Don't worry, I can help you sail through this situation. Don't let these challenges hold you back. With my expertise, I can guide you through the intricacies and help you streamline your processes. Let's connect or have a conversation to explore solutions tailored to your needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-      <input type="checkbox" id="accordion-item-2" class="accordion-checkbox" hidden />
-      <label for="accordion-item-2" class="accordion-toggle">Technical Support Engineer</label>
-      <div class="accordion-content">
-        <p class="designation">Percept Printing Solutions Private Limited • October 2016 - March 2017</p>
-        <p>Roles:</p>
-        <ul>
-          <li>Managed the demo, installation, and training of GMG colour proof and colour server software; Xrite and Epson hardware in India, UAE, and Middle East onsite or online.</li><br>
-          <li>Performed fingerprinting, calibration and reprofiling of gravure, digital printers and offset press.</li><br>
-          <li>Executed annual Calibration of the X Rite Exact.</li>
-        </ul>
-    </div>
+    <footer>
+        <footer id="footer">
+            <div class="footer-container">
+            <div class="contact-details">
+                <p><strong>Phone:</strong> +1 234 567 8900</p>
+                <p><strong>Email:</strong> connect@navrajghimire.com</p>
+            </div>
 
-    <input type="checkbox" id="accordion-item-3" class="accordion-checkbox" hidden />
-    <label for="accordion-item-3" class="accordion-toggle">Assistant Colour Manager & Client Servicing Executive</label>
-    <div class="accordion-content">
-      <p class="designation">Comart Lithographers Private Limited • June 2007 - March 2016</p>
-        <p>Roles:</p>
-        <ul>
-          <li>Managed various production printers (Indoor and large format outdoor) and Epson proofers.</li><br>
-          <li>Maintained print production rips, print quality and standards at all India locations.</li><br>
-          <li>Calibrated and validated the output of all the HP, Mimaki, Roland, and Epson proofers.</li><br>
-          <li>Attended online to help brands with shade approvals and best matching print / Cylinder proof.</li><br>
-          <li>Calibrated monitors, laptops, inkjet printers, cameras, and scanners using spectrophotometer.</li><br>
-          <li>Handled various International, domestic, and walk-in clients, managing their print requirements.</li>
-        </ul>
-    </div>
-  </div>
-</section>
+            <div class="footer-links">
+                <a href="index.html" aria-label="Home"><i class="fa fa-fw fa-home"></i></a>
+                <a href="about.html" aria-label="About"><i class="fa fa-fw fa-user"></i></a>
+                <a href="portfolio.html" aria-label="Portfolio"><i class="fa fa-fw fa-envelope"></i></a>
+                <a href="portfolio.html#footer" aria-label="Contact"><i class="fa fa-fw fa-phone"></i></a>
+            </div>
 
-<div class="video-section">
-  <h2 class="info">Why Colour Management.........?</h2>
-  <div class="card">
-      <h2 class="video-heading">Enhance Quality</h2>
-      <div class="bullet-list">
-          <ul>
-              <li>Consistency</li>
-              <li>Accuracy</li>
-              <li>Client Satisfaction</li>
-              <li>Quality Assurance</li>
-          </ul>
-      </div>
-  </div>
-  <div class="card">
-      <div class="video-container">
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/2Ko3R7HQq8k" title="Creating a Custom ICC Profile" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-  </div>
-  <div class="card">
-    <h2 class="video-heading">Reduce Operation cost</h2>
-    <div class="bullet-list">
-        <ul>
-            <li>Reduced wastage</li>
-            <li>Cost Reduction</li>
-            <li>Client Satisfaction</li>
-            <li>Interoperability</li>
-        </ul>
-    </div>
-</div>
-</div>
+            <div class="footer-copyright-container">
+                <p>© Navraj Ghimire <span id="current-year"></span> | All Rights Reserved</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/in/navraj-ghimire-12b28059/" target="_blank" aria-label="LinkedIn"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.google.com/maps/place/Southern+Alberta+Institute+of+Technology/@51.0640894,-114.0885397,17z/data=!3m1!4b1!4m6!3m5!1s0x53716f9268a69e81:0xb1db5e68bd61e28!8m2!3d51.0640894!4d-114.0885397!16zL20vMDMyYnds?entry=ttu" target="_blank" aria-label="Google Maps"><i class="fa fa-map-marker"></i></a>
+            </div>
+            <div class="contact-details">
+                <p><strong>Hours:</strong> Mon-Fri 9am-5pm</p>
+                <p><strong>Address:</strong> 7777 Street, #22 Whitehorn Court, North East. Calgary, AB. Canada.</p>
+            </div>
+        </div>
+    </footer>
 
-<footer class="footer-container">
-  <div class="footer-columns">
-      <div class="footer-column">
-          <h4>Quick links</h4>
-          <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-          </ul>
-      </div>
-      <div class="footer-column">
-          <h4>Directions</h4>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d243647.3160927732!2d-74.0059413!3d40.7127753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1598387854344!5m2!1sen!2sus" width="100%" height="100" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-      </div>
-      <div class="footer-column">
-          <h4>Contact Us</h4>
-          <h5>123 64 Street, Calgary AB.</h5>
-          <h5>Email: sales@printcolour.com</h5>
-          <h5>Phone: +1-234-5678</h5>
-      </div>
-      <div class="footer-column">
-          <h4>Follow Us</h4>
-          <ul class="social-icons">
-              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          </ul>
-      </div>
-  </div>
-  <hr> <!-- Line above the copyright line -->
-  <br>
-  <br>
-  <br>
-  <div class="footer-copyright-container">
-    <h6>© Navraj Ghimire <span id="current-year"></span> | All Rights Reserved</h6>
-  </div>
-</footer>
-
-<script async="" src="./js/main.js"></script>
-<!-- Link to the JavaScript file -->
-
+    <script src="js/main.js"></script>
 </body>
 </html>
-
