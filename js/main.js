@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       // Add the blinking animation to the loading message
       var loadingMessage = document.createElement('p');
-      loadingMessage.textContent = 'After clicking the above link, please be patient. The content may take time to load.';
+      loadingMessage.textContent = 'Click the above link in green. The content will open in a new tab.';
       loadingMessage.classList.add('loading-message');
       portfolioItemContainer.appendChild(loadingMessage);
   });
