@@ -105,6 +105,15 @@ header {
 }
 
 
+.highlight {
+  color: #ffc401;
+  font-size: 18px; 
+  font-weight: bold; /* Corrected to make it bold */
+  font-style: italic;
+  font-family: "Quicksand", sans-serif, Arial, sans-serif; 
+}
+
+
 .hero-text h1 {
   font-size: 30px; 
   margin-bottom: 0.0px;
