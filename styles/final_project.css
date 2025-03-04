@@ -497,6 +497,29 @@ header {
   padding: 20px;
 }
 
+
+
+
+.accordion-section {
+  width: 100%;
+}
+
+
+.accordion-section .accordion {
+  width: 100%; /* Ensure full width */
+  display: block;
+}
+
+.accordion-section .panel {
+  width: 100%; /* Ensure the panel also spans full width */
+}
+
+
+
+
+
+
+
  /* portfolio  page */
  .portfolio-grid {
   display: flex;
