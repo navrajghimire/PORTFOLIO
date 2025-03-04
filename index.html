@@ -14,24 +14,36 @@
     <link rel="stylesheet" href="styles/final_project.css">
 </head>
 <body>
+
+    
     <header>
         <div class="navbar">
             <div class="logo">
-                <ul class="nav-links">
-                    <img src="assets/navraj_logo_1.png" alt="Navraj Logo with word mark and text below it">
-                </ul>
+                <a href="index.html">
+                    <img src="assets/navraj_logo_1.png" alt="Navraj Logo" class="logo-img">
+                </a>
             </div>
-
+    
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="nav-links">
                     <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a> 
                     <a href="about.html"><i class="fa fa-fw fa-user"></i> About</a> 
                     <a href="portfolio.html"><i class="fa fa-fw fa-envelope"></i> Portfolio</a>
                     <a href="portfolio.html#footer"><i class="fa fa-fw fa-phone"></i> Contact</a>
                 </ul>
             </nav>
+    
+            <!-- Hamburger Menu -->
+            <div class="menu-toggle" id="menu-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </header>
+
+    
+
 
     <section class="hero-section">
         <div class="hero-image">
@@ -45,6 +57,7 @@
 
     <section class="content-section">
         <div class="section-heading">
+            <br>
             <h2 class="content-heading">What is Colour Management ?</h2>
         </div>
 
@@ -64,6 +77,49 @@
         </div>
     </section>
 
+
+
+    <section class="content-section">
+        <div class="section-heading">
+            <br>
+            <h2 class="content-heading">Why is Color Management Required?</h2>
+        </div>
+    
+        <div class="content-container">
+            <div class="content-item">
+                <div class="content-text">
+                    <p class="highlight">Color management is crucial for maintaining accurate and consistent color reproduction across various devices and media. Here are some key reasons why it is essential:</p>
+                    
+                    <ul>
+                        <li><strong>Consistency Across Devices:</strong> Ensures colors remain the same across different devices (monitors, printers, scanners, etc.).</li> <br>
+    
+                        <li><strong>Accurate Color Reproduction:</strong> Matches digital designs to the final printed output, minimizing color variations.</li><br>
+    
+                        <li><strong>Improved Workflow Efficiency:</strong> Reduces trial-and-error corrections, saving time and materials.</li><br>
+    
+                        <li><strong>Reduced Waste & Costs:</strong> Minimizes reprints and material wastage by achieving accurate colors on the first attempt.</li><br>
+    
+                        <li><strong>Cross-Media Consistency:</strong> Ensures the same color appearance across digital, print, and packaging outputs.</li><br>
+    
+                        <li><strong>Brand Identity Protection:</strong> Preserves brand-specific colors (e.g., logo colors) across all media.</li><br>
+                    </ul>
+    
+                    <p class="highlight" style="color: #00d9ff;; font-weight: bold;">
+                        Proper color management involves using ICC profiles, calibrating devices, and maintaining consistent workflows to ensure high-quality and predictable results.
+                    </p>
+                    
+                </div>
+    
+                <div class="content-image">
+                    <img src="assets/img2.png" alt="A person calibrating a Macintosh display" style="width: 400px; height: 450px;">
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
     <section class="content-section">
         <div class="section-heading">
             <h2 class="content-heading">What is an ICC Profile?</h2>
@@ -72,7 +128,7 @@
         <div class="content-container">
             <div class="content-item">
                 <div class="content-text">
-                    <p>According to the International Color Consortium (ICC), an ICC profile is a set of data that characterizes a colour input or output device. The profiles describe the colour attributes of a particular device by defining the mapping between the device source and a profile connection space. Simply put, every device that displays colour can be assigned a set of profiles, and these profiles define the colour gamut that will be displayed by these devices.</p>
+                    <p class="highlight">According to the International Color Consortium (ICC), an ICC profile is a set of data that characterizes a colour input or output device. The profiles describe the colour attributes of a particular device by defining the mapping between the device source and a profile connection space. Simply put, every device that displays colour can be assigned a set of profiles, and these profiles define the colour gamut that will be displayed by these devices.</p>
                     <p>So how do designers make sure their monitors display the most accurate colour? There are a few steps that they can take to smooth the process. First and foremost, designers need to know the colour gamut of their devices’ operating systems. If the colour gamut of a laptop and monitor are both sRGB, then it means the monitor will display the accurate colour. On the other hand, if a laptop’s colour gamut is sRGB and the monitor’s colour gamut is DCI-P3, then the designer will have to implant the ICC profile of DCI-P3 into the operating system of that computer and set it up to guarantee accurate colour display!</p>
                     <p>Digital images and graphics all have their own ICC profiles. To ensure the image that you are about to work on is displayed accurately, designers have to match the ICC profile of the image with the monitor and implement the corresponding ICC profile into the computer’s operating system. Once these steps are completed, you can then rest assured that the colour of the image will be properly displayed.</p>
                     <p>If doing direct printing, then do an ICC on the finished prints (directly print on vinyl, and then do the ICC on the vinyl). For transfer printing, do the ICC on the final product as well.</p>
@@ -87,76 +143,81 @@
 
 
 
+
     <footer>
+
         <footer id="footer">
             <div class="footer-container">
             <div class="contact-details">
-                <p><strong>Phone:</strong> +1 403 891 5037</p>
+                <p> <strong>Phone:</strong> +1 403 891 5037</p>
                 <p><strong>Email:</strong> navrajghimire@gmail.com</p>
             </div>
 
             <div class="footer-links">
+
                 <a href="index.html" aria-label="Home"><i class="fa fa-fw fa-home"></i></a>
                 <a href="about.html" aria-label="About"><i class="fa fa-fw fa-user"></i></a>
-                <a href="portfolio.html" aria-label="Portfolio"><i class="fa fa-fw fa-envelope"></i></a>
-                <a href="portfolio.html#footer" aria-label="Contact"><i class="fa fa-fw fa-phone"></i></a>
+                <a href="portfolio.html" aria-label="Portfolio"><i class="fa fa-fw fa-envelope"></i></a>  
+                <a href="portfolio.html#footer" aria-label="Contact"><i class="fa fa-fw fa-phone"></i></a>              
             </div>
 
             <div class="footer-copyright-container">
                 <p>© Navraj Ghimire <span id="current-year"></span> | All Rights Reserved</p>
             </div>
 
+            
 
             <div class="social-icons">
                 
                 
-<!-- Ensure Font Awesome 6.4.2+ is included in your <head> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-    <div class="social-icons">
-        <!-- Facebook -->
-        <a href="https://www.facebook.com/navrajghimire" target="_blank" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-    
-        <!-- LinkedIn -->
-        <a href="https://www.linkedin.com/in/navraj-ghimire-12b28059/" target="_blank" aria-label="LinkedIn">
-            <i class="fa-brands fa-linkedin"></i>
-        </a>
-    
-        <!-- X (formerly Twitter) -->
-        <a href="https://x.com/navrajghimire" target="_blank" aria-label="X (formerly Twitter)">
-            <i class="fa-brands fa-x-twitter"></i>
-        </a>
-    
-        <!-- Instagram -->
-        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-    
-        <!-- Google Maps (Location Marker) -->
-        <a href="https://www.google.com/maps/place/Southern+Alberta+Institute+of+Technology/@51.0640894,-114.0885397,17z/data=!3m1!4b1!4m6!3m5!1s0x53716f9268a69e81:0xb1db5e68bd61e28!8m2!3d51.0640894!4d-114.0885397!16zL20vMDMyYnds?entry=ttu" target="_blank" aria-label="Google Maps">
-            <i class="fa-solid fa-map-marker-alt"></i>
-        </a>
-    </div>
-    
-
-
-
-
-            </div>
-
-
-
-
-
-            <div class="contact-details">
-                <p><strong>Hours:</strong> Mon-Fri 9am-5pm</p>
-                <p><strong>Address:</strong> 7777 Street, #22 Whitehorn Court, North East. Calgary, AB. Canada.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+                <!-- Ensure Font Awesome 6.4.2+ is included in your <head> -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+                
+                    <div class="social-icons">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/navrajghimire" target="_blank" aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/navraj-ghimire-12b28059/" target="_blank" aria-label="LinkedIn">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    
+                        <!-- X (formerly Twitter) -->
+                        <a href="https://x.com/navrajghimire" target="_blank" aria-label="X (formerly Twitter)">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    
+                        <!-- Google Maps (Location Marker) -->
+                        <a href="https://www.google.com/maps/place/Southern+Alberta+Institute+of+Technology/@51.0640894,-114.0885397,17z/data=!3m1!4b1!4m6!3m5!1s0x53716f9268a69e81:0xb1db5e68bd61e28!8m2!3d51.0640894!4d-114.0885397!16zL20vMDMyYnds?entry=ttu" target="_blank" aria-label="Google Maps">
+                            <i class="fa-solid fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                    
+                
+                
+                
+                
+                            </div>
+                
+                
+                
+                
+                
+                            <div class="contact-details">
+                                <p><strong>Hours:</strong> Mon-Fri 9am-5pm</p>
+                                <p><strong>Address:</strong> 7777 Street, #22 Whitehorn Court, North East. Calgary, AB. Canada.</p>
+                            </div>
+                        </div>
+                    </footer>
+                
+                    <script src="js/main.js"></script>
+                </body>
+                </html>
+                

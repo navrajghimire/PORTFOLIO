@@ -1,75 +1,207 @@
 /* overall body text */
+/* Body - Remove conflicting margins */
 body {
-  margin: 0;
+  margin: 0; /* Fixes overflow by removing body margin */
+  padding: 85px 10px 10px; /* Adjust padding to prevent content from hiding behind the header */
   font-family: "Quicksand", sans-serif, Arial, 'Times New Roman';
+  font-size: larger;
   background-color: #000000;
-  margin: 10px; 
-  padding: 10px; 
-  
-  }
-  
+  box-sizing: border-box; /* Ensures padding does not add to width */
+}
 
-/* header section */
-
+/* Header - Fixed position */
 header {
   background-color: #000000;
   color: #fff;
-  padding: 0px 0px;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1000;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* Logo - Align to the left */
+.logo {
+  margin-right: auto; /* Pushes links to the right */
+}
+
+.logo img {
+  height: 65px;
+}
+
+/* Logo Hover Effect */
+.logo a {
+  display: inline-block;
+  padding: 5px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease-in-out;
+}
+
+.logo a:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+.logo-img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo a:hover .logo-img {
+  transform: scale(1.25); /* Scale logo on hover */
+}
+
+
+
+
+
+
+
+
+/* Navbar Styles */
+
+
+/* General Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: relative;
   z-index: 1000;
 }
 
 
 
-/* nav menu */
-.navbar {
+
+
+/* Logo Styles */
+.logo {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #000000;
-  overflow: auto;
 }
 
-
-.logo img {
-  height: 40px;
+.logo-img {
+  width: 150px; /* Adjust logo size */
+  height: auto;
 }
 
+/* Navbar Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+}
 
-.navbar a {
-  float: left;
-  padding: 12px;
-  color: rgb(255, 247, 0);
+.nav-links a {
+  color: rgb(255, 247, 0);  /* Yellow color */
   text-decoration: none;
-  font-size: 17px;
-  margin-right: 20px; 
+  font-size: 20px;
+  padding: 12px;
+  transition: background-color 0.3s ease;
 }
 
-
-.navbar a:hover {
-  background-color: #363636;
-  color: #00ccff;
+.nav-links a:hover {
+  background-color: #0a1a41;
+  color: #00ccff;  /* Light blue hover color */
 }
 
+/* Fix for Overlapping Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001; /* Ensures hamburger is always on top */
+  margin-left: auto; /* Pushes hamburger to the right */
+}
 
+/* Hamburger Bars */
+.menu-toggle .bar {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background-color: rgb(255, 247, 0); /* Yellow color */
+  transition: all 0.3s ease;
+}
 
-@media screen and (max-width: 600px) {
-  .navbar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
+/* Hamburger Default State */
+.menu-toggle .bar:nth-child(1) {
+  top: 8px;
+}
+
+.menu-toggle .bar:nth-child(2) {
+  top: 16px;
+}
+
+.menu-toggle .bar:nth-child(3) {
+  top: 24px;
+}
+
+/* Open State (Perfect X) */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0; /* Hide middle bar */
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile View */
+@media screen and (max-width: 768px) {
   .nav-links {
-    width: 70%; 
-    align-items: center;
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333; /* Dark background */
+      padding: 10px;
+      transform: translateY(-100%);
+      transition: transform 0.3s ease;
   }
-  
+
+  .nav-links.menu-open {
+      display: flex;
+      transform: translateY(0);
+      background:black;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
   .nav-links a {
-    display: block;
+      font-size: 18px;
+      color: #eeff00;
+      text-align: center;
+  }
+
+  .nav-links a:hover {
+      background-color: #0a1a41;
+      background: none;
+      color: #00ccff;
   }
 }
+
+/* Ensure the hamburger icon is hidden in full-screen */
+@media screen and (min-width: 769px) {
+  .menu-toggle {
+      display: none;
+  }
+}
+
 
 
 /* hero section */
@@ -106,11 +238,12 @@ header {
 
 
 .highlight {
-  color: #ffc401;
+  color: #bc6eff;
   font-size: 18px; 
   font-weight: bold; /* Corrected to make it bold */
   font-style: italic;
   font-family: "Quicksand", sans-serif, Arial, sans-serif; 
+  text-align: ;
 }
 
 
@@ -254,14 +387,15 @@ header {
 }
 
 
+* Add margin to the body content */
 .content-container {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center; 
-  text-align:center
+  text-align: center;
+  margin: 0 100px; /* 50px margin on both sides */
 }
-
 
 .content-item {
   display: flex;
@@ -364,27 +498,154 @@ header {
 }
 
  /* portfolio  page */
-
-
- 
-.portfolio-grid {
+ .portfolio-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  color: #00d0ff;
+  gap: 20px;  /* Adjust spacing between items */
+}
+
+ /* portfolio  page */
+ .portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;  /* Adjust spacing between items */
 }
 
 .portfolio-item {
-  width: calc(33.33% - 20px);
-  margin-bottom: 20px;
-  padding-left: 3px;
-  border: #00ccff;
+  max-width: 220px;  /* Control item size */
+  text-align: center;  /* Center the text */
 }
 
-.portfolio-image {
-  width: 60%;
-  height: auto;
+.portfolio-item p {
+  margin-top: 8px;  /* Add some spacing between the image and text */
+  font-size: 20px;  /* Adjust font size */
+  color:  #00ccff;  /* Ensure the text is visible */
 }
+.portfolio-image {
+  width: 100%;  /* Make the image scale within the item */
+  max-width: 180px;  /* Adjust this value to control image size */
+  height: auto;  /* Maintain aspect ratio */
+  border-radius: 8px;  /* Optional: Add rounded corners */
+}
+
+.disclaimer {
+  margin-top: 20px;
+  margin-left: 40px;
+  font-size: 18px;
+  color: #888;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+.software-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Distribute items evenly */
+  color: #00d0ff; /* Text color */
+  gap: 10px; /* Small gap between items */
+}
+
+.software-item {
+  width: calc(20% - 10px); /* 5 items per row */
+  margin-bottom: 20px; /* Space between rows */
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center image and text horizontally */
+  text-align: center; /* Center text */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+/* Enlarged image size */
+.software-image {
+  width: 150px; /* Larger logo size */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Ensure responsiveness */
+}
+
+.software-item p {
+  margin-top: 12px; /* Space between the image and label */
+  font-size: 22px; /* Larger text size */
+  color: #00d0ff; /* Text color */
+}
+
+/* Hover effect - Lift without shadow */
+.software-item:hover {
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .software-item {
+    width: calc(25% - 10px); /* 4 items per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .software-item {
+    width: calc(33.33% - 10px); /* 3 items per row on small tablets */
+  }
+}
+
+@media (max-width: 480px) {
+  .software-item {
+    width: calc(50% - 10px); /* 2 items per row on mobile */
+  }
+
+  .software-image {
+    width: 60px; /* Slightly smaller images for mobile */
+  }
+
+  .software-item p {
+    font-size: 18px; /* Slightly smaller text on mobile */
+  }
+}
+
+
+
+
+
+
+
+.hardware-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px; /* Space between items */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.hardware-grid span {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal alignment */
+  background: #002d57; /* Light background for each item */
+  border-radius: 12px; /* Rounded edges */
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  color: #ffb300; /* Text color */
+  font-weight: 500;
+  min-height: 60px; /* Ensures vertical alignment works */
+  transition: transform 0.3s ease;
+}
+
+.hardware-grid span:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+
+
 
 .content-item {
   border: 3px solid yellow;
@@ -394,43 +655,87 @@ header {
   padding: 20px;
 }
 
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
 
-  .content-heading {
-    margin-top: 100px;       /* gap from top for portfolio page */
+//* Portfolio Grid */
+.portfolio-grid {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center items horizontally */
+}
+
+/* Portfolio Item */
+.portfolio-item {
+  display: flex;
+  flex-direction: column; /* Stack image and text */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Align text */
+}
+
+/* Portfolio Image - Set Fixed Size */
+.portfolio-image {
+  width: 300px; /* Fixed image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Portfolio Text */
+.portfolio-item p {
+  margin-top: 8px; /* Space between image and text */
+  font-size: 16px; /* Text size */
+}
+
+/* Portfolio Link Styling */
+.portfolio-item a {
+  color: #00ff2f; /* Link color */
+  font-size: medium; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
+}
+
+.portfolio-item a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Adjustment - 2 items on medium screens */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  }
+}
+
+/* Responsive Adjustment - 1 item on small screens */
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr; /* 1 item per row */
+  }
+
+  .portfolio-image {
+    width: 100%; /* Make images responsive */
+    max-width: 300px; /* Limit maximum image size */
   }
 
   .portfolio-item p {
-    font-size: 10px;
-    display: block;
-    text-align: center;
-    margin-top: 5px;
-    font-size: 10px;/* Reduce font size to 10px for smaller screens */
-    text-align: left;
-     margin-top: 5px;
-    padding-left: 10px;
+    font-size: 12px; /* Smaller text on mobile */
+  }
+}
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .portfolio-item img {
+    width: 100%; /* Make images responsive on smaller screens */
+    max-width: 300px; /* Limit maximum size on small devices */
+  }
+
+  .portfolio-item p {
+    font-size: 12px; /* Smaller text on mobile */
   }
 }
 
 
-/* CSS for the random content */
 
-#portfolio-item {
-  margin-top: 20px; 
-}
 
-#portfolio-item a {
-  color: #00ff2f; 
-  font-size: medium;
-  font-weight: bold;
-  text-decoration: none; 
-}
 
-#portfolio-item a:hover {
-  text-decoration: underline;
-}
+
 
 #loading-message {
   color: rgb(255, 0, 43); 
@@ -475,6 +780,12 @@ header {
 
 
 
+
+
+
+
+
+
 /* Footer styles */
 footer {
   background-color: rgb(0, 0, 0); 
@@ -498,7 +809,7 @@ footer {
   color: rgb(255, 238, 0);
   text-decoration: none;
   margin-right: 10px;
-  font-size: 24px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
@@ -506,7 +817,7 @@ footer {
   color: rgb(255, 238, 0);
   text-decoration: none;
   margin-right: 10px;
-  font-size: 24px; 
+  font-size: 18px; 
   transition: color 0.3s ease;
 }
 

@@ -7,16 +7,28 @@
 
 
 
+
+
+
  // NavBAR
 
-document.addEventListener('DOMContentLoaded', function () {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+ 
 
-  menuToggle.addEventListener('click', function () {
-      navLinks.classList.toggle('menu-open');
-  });
+
+ document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', function () {
+        navLinks.classList.toggle('menu-open'); // Show/hide menu
+        menuToggle.classList.toggle('open'); // Animate hamburger to X
+    });
 });
+
+
+
+
+
 
 
 // Accordian
