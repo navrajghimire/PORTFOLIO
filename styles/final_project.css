@@ -635,6 +635,104 @@ header {
 
 
 
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 12px; /* Space between items */
+  padding: 20px 0;
+  text-align: center;
+
+}
+
+
+
+
+
+
+.skills-grid span {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal alignment */
+  background: #252f39; /* Light background for each item */
+  border-radius: 12px; /* Rounded edges */
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(255, 255, 255, 0.1);
+  color: #e5ff00; /* Text color */
+  font-weight: 500;
+  min-height: 60px; /* Ensures vertical alignment works */
+  transition: transform 0.3s ease;
+}
+
+.skills-grid span:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+
+
+
+
+
+
+/* Flip Card Container */
+.flip-card {
+  perspective: 1000px; /* Adds depth effect */
+}
+
+/* Inner Flip Card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+}
+
+/* Flip on Hover */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Front and Back Side of the Card */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back side when flipped */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Front Card Styling */
+.flip-card-front {
+  background: #ffffff;
+}
+
+/* Back Card Styling */
+.flip-card-back {
+  background: #4A90E2; /* Change to your desired color */
+  color: white; /* Different text color */
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .hardware-grid {
