@@ -483,7 +483,9 @@ header {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
+  box-sizing: border-box; /* Fixes the overflow issue */
 }
+
 
 .accordion-section .toggle-icon {
   float: right;
