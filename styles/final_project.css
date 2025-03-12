@@ -324,11 +324,19 @@ header {
   font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
   font-weight: 400;
   font-style: italic;
-  text-align: ;
+  text-align: justify;
 }
 
 
-
+/* Media query for mobile (max-width 768px) */
+@media (max-width: 768px) {
+  .highlight {
+    font-size: 16px; /* Adjust font size for mobile */
+    font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
+    font-style: italic;
+    text-align: justify;
+  }
+}
 
 
 .hero-text h1 {
@@ -455,6 +463,11 @@ header {
 }
 
 
+
+
+
+
+
 /* 
 .content-heading{
   font-family: "Josefin Sans" Arial, sans-serif;
@@ -514,6 +527,14 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
 * Add margin to the body content */
 .content-container {
   padding: 20px;
@@ -549,7 +570,23 @@ header {
   .content-image {
       margin-bottom: 20px; 
   }
+
+  .content-text{
+    font-family: "Quicksand", sans-serif, Arial, sans-serif;
+    font-size: 16px;
+    background-color: #000000;
+    color: #00d0ff;
+
+  
+  }
+
+
+  
 }
+
+
+
+
 
 
 .content-video {
@@ -599,6 +636,22 @@ header {
 }
 
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+
+  .accordion-section .accordion  {
+    font-size: 14px; /* Add new font size */
+    padding: 20px;
+
+  }
+  
+
+
+}
+
+
+
+
 .accordion-section .accordion:hover,
 .accordion-section .accordion.active {
   background-color: #023753;
@@ -628,6 +681,14 @@ header {
 }
 
 
+/* Media Query for Mobile (Screens 768px and smaller) */
+@media (max-width: 768px) {
+  .accordion-section .panel {
+    font-size: 12px; /* Reduce font size for mobile */
+    text-align:left
+  }
+}
+
 .accordion-section .toggle-icon {
   float: right;
 }
@@ -641,7 +702,17 @@ header {
 }
 
 
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
 
+  .accordion-container {
+
+    border-radius: 40px;
+    overflow: hidden;
+    margin: 2px;
+    padding: 2px;
+  }
+}
 
 .accordion-section {
   width: 100%;
@@ -705,8 +776,15 @@ header {
 }
 
 
+/* Media query for mobile view */
+@media only screen and (max-width: 768px) {
+  .disclaimer {
+    font-size: 12px;
+    text-align: center
 
+  }
 
+}
 
 
 
@@ -811,9 +889,18 @@ header {
 }
 
 
+/* For extra small screens (phones below 480px width) */
+@media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stacks items in a single column */
+  }
 
-
-
+  .skills-grid span {
+    font-size: 16px; /* Adjust text size for smaller screens */
+    min-height: 45px;
+    padding: 1px 3px;
+  }
+}
 
 
 /* Flip Card Container */
@@ -906,6 +993,18 @@ header {
 
 
 
+/* For extra small screens (phones below 480px width) */
+@media (max-width: 480px) {
+  .hardware-grid {
+    grid-template-columns: repeat(1, 1fr); /* Stacks items in a single column */
+  }
+
+  .hardware-grid span {
+    font-size: 16px; /* Adjust text size for smaller screens */
+    min-height: 45px;
+    padding: 1px 3px;
+  }
+}
 
 
 
