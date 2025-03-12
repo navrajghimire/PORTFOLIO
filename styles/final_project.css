@@ -3,16 +3,24 @@
 body {
   margin: 0; /* Fixes overflow by removing body margin */
   padding: 85px 10px 10px; /* Adjust padding to prevent content from hiding behind the header */
-  font-family: "Quicksand", sans-serif, Arial, 'Times New Roman';
-  font-size: larger;
+  font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 24px;
+  text-align: justify;
   background-color: #000000;
   box-sizing: border-box; /* Ensures padding does not add to width */
 }
 
+
+
+
+
+
+
 /* Header - Fixed position */
 header {
   background-color: #000000;
-  color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
@@ -70,6 +78,12 @@ header {
   position: relative;
   z-index: 1000;
 }
+
+
+
+
+
+
 
 
 
@@ -193,6 +207,10 @@ header {
       background: none;
       color: #00ccff;
   }
+
+
+
+
 }
 
 /* Ensure the hamburger icon is hidden in full-screen */
@@ -204,17 +222,75 @@ header {
 
 
 
-/* hero section */
 
+
+
+/* HERO SECTION */
+
+
+/* Hero Section */
+
+
+
+
+
+
+
+/* Hero Section */
 .hero-section {
-  position: relative;
+  font-family: "Josefin Sans", Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
   text-align: center;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0; /* Remove top padding */
 }
 
-.hero-image img {
+/* Video Styling */
+.hero-video {
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
+.hero-video video {
+  width: 100vw; /* Full width on large screens */
+  height: 100vh; /* Full height on large screens */
+  width: 1790px; /* Fixed width */
+  height: 840px; /* Fixed height */
+  object-fit: contain; /* Ensures full video is visible */
+  display: block;
+
+
+
+
+  
+}
+
+/* Mobile View - Set Video Resolution to 475x275 */
+@media (max-width: 768px) {
+  .hero-section {
+    height: auto; /* Let height adjust naturally */
+  }
+
+  .hero-video video {
+    width: 475px; /* Fixed width */
+    height: 275px; /* Fixed height */
+    object-fit: contain; /* Ensures full video is visible */
+  }
+}
+
+
+
+
+
+/* Overlay & Text */
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -226,29 +302,41 @@ header {
 
 .hero-text {
   position: absolute;
-  top: 40%;
-  left: 00%;
-  color: #00d9ff;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff299b;
   border-radius: 20px;
-  max-width: 80%; 
-  padding: 10px; 
-  background-color: rgba(0, 0, 0, 0.85); 
-  font-family: "Quicksand", sans-serif, Arial, sans-serif; 
+  max-width: 80%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "Josefin Sans", "Quicksand", Arial, sans-serif;
+  text-align: center;
 }
 
 
+
+
+
 .highlight {
-  color: #bc6eff;
-  font-size: 18px; 
-  font-weight: bold; /* Corrected to make it bold */
+  color: #F462C6;
+  font-size: 25px; 
+  font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
+  font-weight: 400;
   font-style: italic;
-  font-family: "Quicksand", sans-serif, Arial, sans-serif; 
   text-align: ;
 }
 
 
+
+
+
 .hero-text h1 {
-  font-size: 30px; 
+  font-family: "josefin-sans", sans-serif;
+
+  font-weight: 400;
+  font-style: italic;
+  font-size: 35px; 
   margin-bottom: 0.0px;
   margin-top: 0.0px;
 
@@ -314,17 +402,33 @@ header {
 
   .hero-text {
     position: absolute;
-    top: 30%;
-    left: 00%;
-    color: #00d9ff;
+    top: 72%;
+    left: 50%;
+    color: #ff0088;
     border-radius: 20px;
     max-width: 80%; 
     padding: 10px; 
-    background-color: rgba(0, 0, 0, 0.85); 
-    font-family: "Quicksand", sans-serif, Arial, sans-serif; 
+    background-color: rgba(0, 0, 0, 0.65); 
+    font-family: "Josefin Sans", Arial, sans-serif;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+
   }
 
   
+
+
+  
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -340,13 +444,35 @@ header {
 /* content section*/
 
 .section-heading{
-  font-family: "Quicksand", sans-serif, Arial, sans-serif;
-  font-size: 20px;
+  font-family: "Josefin Sans" Arial, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  font-style: normal;
   color: #00d0ff;
   padding-left: 5px;
 
 
 }
+
+
+/* 
+.content-heading{
+  font-family: "Josefin Sans" Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  font-style: normal;
+  color: #00d0ff;
+  padding-left: 5px;
+
+
+}
+
+*/
+
+
+
+
+
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -366,6 +492,7 @@ header {
 
 .content-text{
   font-family: "Quicksand", sans-serif, Arial, sans-serif;
+  font-size: 23px;
   background-color: #000000;
   color: #00d0ff;
   align-items: left; 
@@ -375,9 +502,9 @@ header {
 
 
 .content-text2{
-  font-family: "Quicksand", sans-serif, Arial, sans-serif;
+  font-family: "Josefin Sans" "Quicksand", sans-serif, Arial, sans-serif;
   background-color: #000000;
-  color: #00d0ff;
+  color: #ff0073;
   align-items: center; 
   text-align:left
 
@@ -400,6 +527,8 @@ header {
 .content-item {
   display: flex;
   margin-bottom: 20px;
+  align-items: center; 
+
 }
 
 
@@ -446,12 +575,17 @@ header {
 
 /* accordian */
 
+
 .accordion-section .accordion {
-  font-family: "Quicksand", sans-serif, Arial, 'Times New Roman';
+
+
+  font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 24px;
 
   border-radius: 40px; 
-  font-size: 16px;
-  font-weight: 1000;
+
   border: none;
   background-color: #000000;
   color: #ffffff;
@@ -461,7 +595,7 @@ header {
   text-align: left;
   outline: none;
   transition: background-color 0.6s ease;
-  border-bottom: 2px solid  #00ccff;/
+  border-bottom: 2px solid  #00ccff;
 }
 
 
@@ -475,11 +609,18 @@ header {
 
 
 .accordion-section .panel {
-  font-size: 16px;
+
+
+  font-family: "josefin-sans", "Quicksand", Arial, "Times New Roman", sans-serif;
+  font-weight: 600;
+  font-style: bold;
+  font-size: 19px;
+
+  color:rgb(194, 191, 191);
   font-weight: 1000;
   border-radius: 40px;
   padding: 0 18px;
-  background-color: #00ccff;
+  background-color: #171717;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -914,6 +1055,8 @@ footer {
   background-color: rgb(0, 0, 0); 
   color: rgb(255, 247, 0);
   padding: 20px;
+  font-size: medium;
+  
 }
 
 .contact-details strong {
@@ -925,11 +1068,12 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
 }
 
 
 .footer-links a {
-  color: rgb(255, 238, 0);
+  color: #F462C6;
   text-decoration: none;
   margin-right: 10px;
   font-size: 20px;
@@ -937,10 +1081,10 @@ footer {
 }
 
 .social-icons a {
-  color: rgb(255, 238, 0);
+  color: #F462C6;
   text-decoration: none;
   margin-right: 10px;
-  font-size: 18px; 
+  font-size: 22px; 
   transition: color 0.3s ease;
 }
 
