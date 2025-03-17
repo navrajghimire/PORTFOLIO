@@ -904,63 +904,47 @@ header {
 }
 
 
-/* Flip Card Container */
-.flip-card {
-  perspective: 1000px; /* Adds depth effect */
+
+
+
+
+.software-image {
+  display: block; /* Ensures text remains separate */
+  animation: flipOnce 1s ease-in-out; /* Flip once on page load */
 }
 
-/* Inner Flip Card */
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.8s ease;
+/* Keyframes for the page load flip */
+@keyframes flipOnce {
+  0% {
+      transform: rotateY(0deg);
+  }
+  50% {
+      transform: rotateY(180deg);
+  }
+  100% {
+      transform: rotateY(0deg);
+  }
 }
 
-/* Flip on Hover */
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+/* Hover Effect - Same animation as Page Load */
+.software-item:hover .software-image {
+  animation: flipHover 1s ease-in-out; /* Apply flip animation only on hover */
+  animation-fill-mode: forwards; /* Keeps final state */
+  pointer-events: none; /* Prevents hover from re-triggering */
 }
 
-/* Front and Back Side of the Card */
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden; /* Hides the back side when flipped */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+/* Keyframes for the hover flip */
+@keyframes flipHover {
+  0% {
+      transform: rotateY(0deg);
+  }
+  50% {
+      transform: rotateY(180deg);
+  }
+  100% {
+      transform: rotateY(0deg);
+  }
 }
-
-/* Front Card Styling */
-.flip-card-front {
-  background: #ffffff;
-}
-
-/* Back Card Styling */
-.flip-card-back {
-  background: #4A90E2; /* Change to your desired color */
-  color: white; /* Different text color */
-  transform: rotateY(180deg);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
