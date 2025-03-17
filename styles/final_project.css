@@ -273,18 +273,19 @@ header {
   
 }
 
-/* Mobile View - Set Video Resolution to 475x275 */
+
 @media (max-width: 768px) {
   .hero-section {
     height: auto; /* Let height adjust naturally */
   }
 
   .hero-video video {
-    width: 475px; /* Fixed width */
-    height: 275px; /* Fixed height */
-    object-fit: contain; /* Ensures full video is visible */
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures the full video is visible */
   }
 }
+
 
 
 
